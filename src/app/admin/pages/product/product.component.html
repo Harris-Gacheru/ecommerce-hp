@@ -1,1 +1,65 @@
-<p>product works!</p>
+<div class="container-fluid">
+    <div class="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    
+    <div class="body">
+        <app-navbar></app-navbar>
+
+        <nav aria-label="breadcrumb" class="mt-2 mx-5">
+            <ol class="breadcrumb bg-light p-3 ps-4 border rounded">
+              <li class="breadcrumb-item"><a routerLink="/admin/">Home</a></li>
+              <li class="breadcrumb-item"><a routerLink="/admin/products">Products</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Product</li>
+            </ol>
+        </nav>
+        
+        <div class="content d-flex">
+            <div class="product w-50">
+                <div class="prod-images">
+                    <div class="img border">
+                        <img src="../../../../assets/images/shampoo.png" alt="">
+                    </div>
+                    <div class="images bg-light mt-2 d-flex justify-content-center">
+                        <img class="flex-fill" src="../../../../assets/images/shampoo.png" alt="">
+                        <img class="flex-fill"  src="../../../../assets/images/shampoo.png" alt="">
+                        <img class="flex-fill"  src="../../../../assets/images/shampoo.png" alt="">
+                        <img class="flex-fill"  src="../../../../assets/images/shampoo.png" alt="">
+                    </div>
+                </div>        
+                <div class="details mt-3 mb-2">
+                    <div class="name">
+                        <h5>Product Name: </h5>
+                        <p>Lorem</p>
+                    </div>
+                    <div class="description">
+                        <h5>Description: </h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse officiis voluptates corporis explicabo, iusto libero reprehenderit nam tenetur, atque velit aperiam. Ea esse qui minima et mollitia consectetur pariatur eos.</p>
+                    </div>
+                    <div class="category">
+                        <h5>Category: </h5>
+                        <p>Lorem</p>
+                    </div>
+                    <div class="d-flex gap-5">
+                        <div class="price">
+                            <h5>Price</h5>
+                            <p>$45</p>
+                        </div>
+                        <div class="quantity">
+                            <h5>Quantity</h5>
+                            <p>45</p>
+                        </div>
+                    </div>
+                </div>  
+                <div class="actions mt-4">
+                    <a routerLink="/admin/product/1/edit" class="text-decoration-none me-5">Edit</a>
+                    <button type="button" class="btn bg-danger text-white">Delete</button>
+                </div>      
+            </div>
+
+            <div class="edit w-50">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

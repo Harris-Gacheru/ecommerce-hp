@@ -1,1 +1,93 @@
-<p>dashboard works!</p>
+<div class="container-fluid">
+    <div class="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+
+    <div class="body bg-light">
+        <app-navbar></app-navbar>
+        
+        <div class="content p-5">
+            <div class="row summary d-md-flex justify-content-between">
+                <div class="col-md-3 p-1">
+                    <div class=" users card p-2 rounded-0">
+                        <p class="fw-light">Total Products</p>
+                        <p class="text-center fs-1">230</p>
+                    </div>
+                </div>
+                <div class="col-md-3 p-1">
+                    <div class="users card p-3 rounded-0">
+                        <p class="fw-light">New users</p>
+                        <p class="text-center fs-1">30</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 p-1">
+                    <div class="orders-summary card p-3 rounded-0">
+                        <p class="fw-light">Total Orders</p>
+                        <p class="text-center fs-3 mb-0">120</p>
+                        <p class="text-center fs-6 text-danger lh-0">
+                            10%<i class="bi bi-arrow-down-short m-0 p-0"></i>
+                        </p>
+                        <p class="text-center fs-6 fw-light">Compared to April 2022</p>
+                    </div>
+                </div>
+                <div class="col-md-3 p-1">
+                    <div class="orders-summary card p-3 rounded-0">
+                        <p class="fw-light">Total Sales</p>
+                        <p class="text-center fs-3 mb-0">120</p>
+                        <p class="text-center fs-6 text-success">
+                            10%<i class="bi bi-arrow-up-short m-0 p-0"></i>
+                        </p>
+                        <p class="text-center fs-6 fw-light">Compared to April 2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card orders rounded-0 mx-1 my-4 p-4">
+                    <h4 class="fw-light mb-3 fs-5">Recent Orders</h4>
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Customer Name</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="align-middle">
+                            <td>#12433</td>
+                            <td>
+                                <span class="bg-warning px-2 py-1 text-white" style="--bs-bg-opacity: 1;">Pending</span>
+                            </td>
+                            <td>Harrison Gacheru</td>
+                            <td>6/8/2022</td>
+                            <td>$345</td>
+                          </tr>
+                          <tr class="align-middle">
+                            <td>#12433</td>
+                            <td>
+                                <span class="bg-danger px-2 py-1 text-white" style="--bs-bg-opacity: .5;">canceled</span>
+                            </td>
+                            <td>Harrison Gacheru</td>
+                            <td>6/8/2022</td>
+                            <td>$345</td>
+                          </tr>
+                          <tr class="align-middle">
+                            <td>#12433</td>
+                            <td>
+                                <span class="bg-success px-2 py-1 text-white" style="--bs-bg-opacity: .5;">completed</span>
+                            </td>
+                            <td>Harrison Gacheru</td>
+                            <td>6/8/2022</td>
+                            <td>$345</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

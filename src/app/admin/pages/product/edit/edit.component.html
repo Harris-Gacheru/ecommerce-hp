@@ -1,1 +1,36 @@
-<p>edit works!</p>
+<div class="container ps-5">
+    <h4>Edit Product</h4>
+    <div class="form">
+        <form>
+            <div class="mb-3">
+              <label for="prodname" class="form-label">Name</label>
+              <input type="text" class="form-control" id="prodname">
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <select class="form-select" aria-label="Category">
+                    <option selected>Category</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+            </div>
+            <div class="d-flex gap-2">
+              <div class="mb-3 w-50">
+                <label for="price" class="form-label">Price</label>
+                <input type="number" class="form-control" id="price">
+              </div>
+              <div class="mb-3 w-50">
+                <label for="quantity" class="form-label">Quantity</label>
+                <input type="number" class="form-control" id="quantity">
+              </div>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Update Product</button>
+          </form>
+    </div>
+</div>

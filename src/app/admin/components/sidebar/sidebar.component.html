@@ -1,0 +1,19 @@
+<div class="offcanvas offcanvas-start sidebar" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Sidebar</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body px-0">
+    <ul class="list-group rounded-0">
+      <li class="list-group-item border-start-0 border-end-0 p-0">
+        <a routerLink="/admin" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="d-block py-3 ps-3 text-decoration-none">Dashboard</a>
+      </li>
+      <li class="list-group-item border-start-0 border-end-0 p-0">
+        <a routerLink="/admin/products" routerLinkActive="active" class="d-block py-3 ps-3 text-decoration-none">Products</a>
+      </li>
+      <li class="list-group-item border-start-0 border-end-0 p-0">
+        <a routerLink="/admin/add-product" routerLinkActive="active" class="d-block py-3 ps-3 text-decoration-none">Add Product</a>
+      </li>
+    </ul>
+  </div>
+</div>

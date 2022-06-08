@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+
+    <div class="content">
+        <app-navbar></app-navbar>
+        
+        <div class="container w-75 h-100 my-5 d-flex align-items-center justify-content-evenly">
+            <div class="avatar d-flex flex-column w-25">
+                <img class="border mb-3" src="../../../../assets/images/blank-profile.png" alt="">
+
+                <button class="btn p-2">Change avatar</button>
+            </div>
+
+            <div class="user-details w-50">
+                <form>
+                    <div class="mb-3">
+                      <label for="firstname" class="form-label">First Name</label>
+                      <input type="text" class="form-control" id="firstname">
+                    </div>
+                    <div class="mb-3">
+                      <label for="lastname" class="form-label">Last Name</label>
+                      <input type="text" class="form-control" id="lastname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+        
+                    <div class="gap-2 d-md-flex justify-content-md-end mt-4">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="submit" class="btn cancel">Cancel</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>

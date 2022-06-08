@@ -5,10 +5,11 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { ProductsComponent } from './pages/products/products.component';
 import { ProductComponent } from './pages/product/product.component';
 import { AddproductComponent } from './pages/addproduct/addproduct.component';
-import { OrdersComponent } from './pages/orders/orders.component';
-import { OrderComponent } from './pages/order/order.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { EditComponent } from './pages/product/edit/edit.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 
 @NgModule({
@@ -16,10 +17,11 @@ import { EditComponent } from './pages/product/edit/edit.component';
     ProductsComponent,
     ProductComponent,
     AddproductComponent,
-    OrdersComponent,
-    OrderComponent,
     DashboardComponent,
-    EditComponent
+    EditComponent,
+    NavbarComponent,
+    SidebarComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,

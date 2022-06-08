@@ -1,0 +1,11 @@
+.profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    object-fit: cover;
+}
+
+.sidebar-icon{
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger1.svg?color=000');
+}
