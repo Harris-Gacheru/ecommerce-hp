@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <app-navbar></app-navbar>
+
+    <div class="content my-5">
+        <form class="mx-auto">
+            <h4 class="my-4 text-uppercase fs-4">Register</h4>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password">
+                </div>
+                <div class="col-md-6">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword">
+                </div>
+            </div>
+            <div class="mb-3">
+                <p class="fw-light">
+                   Already have an account? 
+                    <a routerLink="/login" class="text-decoration-none">Login</a>
+                </p>
+            </div>
+            <div align="center">
+                <button type="submit" class="btn btn-primary my-3 w-100 p-2">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</div>

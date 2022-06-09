@@ -1,0 +1,52 @@
+.container-fluid{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.carousel{
+    height: 60vh;
+    position: relative;
+}
+
+img{
+    height: 60vh;
+    object-fit: cover;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* product */
+.product{
+    border: 0;
+    cursor: pointer;
+}
+.product img{
+    height: 220px;
+    object-fit: cover;
+}
+
+.product button{
+    opacity: 0;
+    transition: 0.5s ease-in;
+}
+.product:hover button{
+    opacity: 1;
+}
+
+/* filter */
+.filter a{
+    color: #000;
+}
+
+.filter a:hover,
+.filter a:focus{
+    color: #0d6efd;
+}

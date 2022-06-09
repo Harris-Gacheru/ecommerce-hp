@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <app-navbar></app-navbar>
+
+    <div class="content my-5">
+        <form class="mx-auto">
+            <h4 class="my-4 text-uppercase fs-4">Login</h4>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password">
+            </div>
+            <div class="mb-3">
+                <p class="fw-light">
+                    Don't have an account? 
+                    <a routerLink="/register" class="text-decoration-none">Signup</a>
+                </p>
+            </div>
+            <div align="center">
+                <button type="submit" class="btn btn-primary my-3 w-100 p-2">Login</button>
+            </div>
+        </form>
+    </div>
+</div>

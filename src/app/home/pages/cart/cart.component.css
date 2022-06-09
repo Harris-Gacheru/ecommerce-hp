@@ -1,0 +1,27 @@
+.container-fluid{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.content{
+    height: calc(100vh - 78px);
+}
+
+.prod img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.prod input{
+    width: 40px;
+    height: 35px;
+    text-align: center;
+}
+
+.action{
+    margin-top: -5px;
+    cursor: pointer;
+}

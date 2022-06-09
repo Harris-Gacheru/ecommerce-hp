@@ -1,0 +1,22 @@
+.carousel{
+    height: 80vh;
+    position: relative;
+}
+
+img{
+    height: 80vh;
+    object-fit: cover;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption{
+    z-index: 2;
+}

@@ -1,0 +1,16 @@
+.product{
+    border: 0;
+    cursor: pointer;
+}
+.product img{
+    height: 220px;
+    object-fit: cover;
+}
+
+.product button{
+    opacity: 0;
+    transition: 0.5s ease-in;
+}
+.product:hover button{
+    opacity: 1;
+}
