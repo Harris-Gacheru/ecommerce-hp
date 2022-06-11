@@ -15,6 +15,10 @@ import { RegisterComponent } from './home/pages/register/register.component';
 import { CartcanvasComponent } from './home/components/cartcanvas/cartcanvas.component';
 import { CartComponent } from './home/pages/cart/cart.component';
 import { ShopComponent } from './home/pages/shop/shop.component';
+import { ProductComponent } from './home/pages/product/product.component';
+import { FooterComponent } from './home/components/footer/footer.component';
+import { SharedModule } from './shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,12 +33,16 @@ import { ShopComponent } from './home/pages/shop/shop.component';
     RegisterComponent,
     CartcanvasComponent,
     CartComponent,
-    ShopComponent
+    ShopComponent,
+    ProductComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AdminModule
+    AdminModule,
+    SharedModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

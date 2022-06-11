@@ -40,13 +40,3 @@ img{
 .product:hover button{
     opacity: 1;
 }
-
-/* filter */
-.filter a{
-    color: #000;
-}
-
-.filter a:hover,
-.filter a:focus{
-    color: #0d6efd;
-}

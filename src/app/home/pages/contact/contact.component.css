@@ -23,3 +23,7 @@
 .form{
     width: 85%;
 }
+
+input.ng-touched.ng-invalid{
+    border: 1px solid red;
+}

@@ -31,55 +31,16 @@
     
     <div class="row">
         <div class="col-md-2">
-            <div class="filter py-4 px-2">
-                <h5 class="fw-bold">Filter By</h5>
-                <hr>
-                
-                <div class="accordion" id="accordionPanelsStayOpenExample">
-                    <div class="accordion-item  border-0">
-                      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                        <button class="accordion-button  rounded-0 bg-white text-dark fw-semibold p-2" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                          Category
-                        </button>
-                      </h2>
-                      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                        <div class="accordion-body p-0">
-                            <ul class="list-group rounded-0">
-                                <li class="list-group-item border-0 ps-3 py-1 fw-light">
-                                    <a href="" class="text-decoration-none">Shampoos</a></li>
-                                <li class="list-group-item border-0 ps-3 py-1 fw-light">
-                                    <a href="" class="text-decoration-none">Conditioners</a></li>
-                                <li class="list-group-item border-0 ps-3 py-1 fw-light">
-                                    <a href="" class="text-decoration-none">Leave-in treatment</a></li>
-                                <li class="list-group-item border-0 ps-3 py-1 fw-light">
-                                    <a href="" class="text-decoration-none">Glosses</a></li>
-                                <li class="list-group-item border-0 ps-3 py-1 fw-light">
-                                    <a href="" class="text-decoration-none">Hair oil</a></li>
-                            </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- <div class="accordion-item  border-0">
-                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                          <button class="accordion-button  rounded-0 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                            Price
-                          </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                          <div class="accordion-body p-0">
-                              
-                          </div>
-                        </div>
-                      </div> -->
-                  </div>
-            </div>
+            <!-- filter -->
+            <app-filter></app-filter>            
+            <!-- end of filter -->
         </div>
     
         <!-- products -->
         <div class="wrapper px-5 col-md-10">
             <div class="products row my-5">
                 <div class="col-md-4 my-2">
-                    <div class="product card">
+                    <div class="product card" (click)="redirect()">
                         <img src="../../../../assets/images/prods/products (2).jpg" alt="">
                         <h5 class="text-left fw-normal my-2">Lorem Shampoo</h5>
                         <p class="summary text-justify fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetur adipi...</p>
@@ -91,7 +52,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 my-2">
-                    <div class="product card">
+                    <div class="product card" (click)="redirect()">
                         <img src="../../../../assets/images/prods/products (7).jpg" alt="">
                         <h5 class="text-left fw-normal my-2">Lorem Shampoo</h5>
                         <p class="summary text-justify fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetur adipi...</p>
@@ -103,7 +64,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 my-2">
-                    <div class="product card">
+                    <div class="product card" (click)="redirect()">
                         <img src="../../../../assets/images/prods/products (2).jpg" alt="">
                         <h5 class="text-left fw-normal my-2">Lorem Shampoo</h5>
                         <p class="summary text-justify fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetur adipi...</p>
@@ -115,7 +76,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 my-2">
-                    <div class="product card">
+                    <div class="product card" (click)="redirect()">
                         <img src="../../../../assets/images/prods/products (3).webp" alt="">
                         <h5 class="text-left fw-normal my-2">Lorem Shampoo</h5>
                         <p class="summary text-justify fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetur adipi...</p>
@@ -127,7 +88,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 my-2">
-                    <div class="product card">
+                    <div class="product card" (click)="redirect()">
                         <img src="../../../../assets/images/prods/products (2).webp" alt="">
                         <h5 class="text-left fw-normal my-2">Lorem Shampoo</h5>
                         <p class="summary text-justify fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetur adipi...</p>
@@ -139,7 +100,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 my-2">
-                    <div class="product card">
+                    <div class="product card" (click)="redirect()">
                         <img src="../../../../assets/images/prods/products (7).jpg" alt="">
                         <h5 class="text-left fw-normal my-2">Lorem Shampoo</h5>
                         <p class="summary text-justify fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetur adipi...</p>
@@ -156,4 +117,5 @@
         <!-- end of products -->
     </div>
     <app-cartcanvas></app-cartcanvas>
+    <app-footer></app-footer>
 </div>

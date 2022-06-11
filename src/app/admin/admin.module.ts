@@ -10,6 +10,8 @@ import { EditComponent } from './pages/product/edit/edit.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { SharedModule } from '../shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }

@@ -7,54 +7,15 @@
         <app-navbar></app-navbar>
 
         <div class="content row d-flex">
-            <div class="category col-md-2">
-                <div class="filter py-4 px-2">
-                    <h5 class="fw-bold">Filter By</h5>
-                    <hr>
-                    
-                    <div class="accordion" id="accordionPanelsStayOpenExample">
-                        <div class="accordion-item  border-0">
-                          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                            <button class="accordion-button  rounded-0 bg-white text-dark fw-semibold p-2" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                              Category
-                            </button>
-                          </h2>
-                          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                            <div class="accordion-body p-0">
-                                <ul class="list-group rounded-0">
-                                    <li class="list-group-item border-0 ps-3 py-1 fw-light">
-                                        <a href="" class="text-decoration-none">Shampoos</a></li>
-                                    <li class="list-group-item border-0 ps-3 py-1 fw-light">
-                                        <a href="" class="text-decoration-none">Conditioners</a></li>
-                                    <li class="list-group-item border-0 ps-3 py-1 fw-light">
-                                        <a href="" class="text-decoration-none">Leave-in treatment</a></li>
-                                    <li class="list-group-item border-0 ps-3 py-1 fw-light">
-                                        <a href="" class="text-decoration-none">Glosses</a></li>
-                                    <li class="list-group-item border-0 ps-3 py-1 fw-light">
-                                        <a href="" class="text-decoration-none">Hair oil</a></li>
-                                </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- <div class="accordion-item  border-0">
-                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                              <button class="accordion-button  rounded-0 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                Price
-                              </button>
-                            </h2>
-                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                              <div class="accordion-body p-0">
-                                  
-                              </div>
-                            </div>
-                          </div> -->
-                      </div>
-                </div>
+            <div class="category col-md-2 pt-4">
+                <!-- filter -->
+                <app-filter></app-filter>
+                <!-- end of filter -->
             </div>
             <div class="prods-container col-md-10 p-3 pt-5">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb bg-light p-3 ps-4 border rounded">
-                      <li class="breadcrumb-item"><a routerLink="/admin">Home</a></li>
+                      <li class="breadcrumb-item"><a routerLink="/admin" class="text-decoration-none">Home</a></li>
                       <li class="breadcrumb-item active" aria-current="page">Products</li>
                     </ol>
                 </nav>
@@ -131,7 +92,10 @@
                             </td>
                           </tr>
                         </tbody>
-                      </table>
+                    </table>
+
+                    <!-- pagination -->
+                    <app-pagination></app-pagination>
                 </div>
             </div>
         </div>

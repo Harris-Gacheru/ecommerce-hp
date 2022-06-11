@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hairproducts',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HairproductsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  redirect(){
+    this.router.navigate(['/shop'])
+  }
 }

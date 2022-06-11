@@ -9,37 +9,42 @@
         <div class="container w-50 my-5">
             <h4 class="mb-3">Add Product</h4>
             <div class="form">
-                <form>
+                <form [formGroup]="addProductForm">
                     <div class="mb-3">
                       <label for="prodname" class="form-label">Name</label>
-                      <input type="text" class="form-control" id="prodname">
+                      <input type="text" class="form-control" id="prodname" formControlName="productname">
+                      <p class="text-danger" *ngIf="addProductForm.get('productname')!.touched && addProductForm.get('productname')!.invalid">*Please enter product name</p>
                     </div>
                     <div class="mb-3">
                         <label for="category" class="form-label">Category</label>
-                        <select class="form-select" aria-label="Category">
+                        <select class="form-select" aria-label="Category" formControlName="category">
                             <option selected>Category</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
                           </select>
+                          <p class="text-danger" *ngIf="addProductForm.get('category')!.touched && addProductForm.get('category')!.invalid">*Please enter category</p>
                     </div>
                     <div class="d-flex gap-2">
                         <div class="mb-3 w-50">
-                        <label for="price" class="form-label">Price</label>
-                        <input type="number" class="form-control" id="price">
+                            <label for="price" class="form-label">Price</label>
+                            <input type="number" class="form-control" id="price" formControlName="price">
+                            <p class="text-danger" *ngIf="addProductForm.get('price')!.touched && addProductForm.get('price')!.invalid">*Please enter price</p>
                         </div>
                         <div class="mb-3 w-50">
-                        <label for="quantity" class="form-label">Quantity</label>
-                        <input type="number" class="form-control" id="quantity">
+                            <label for="quantity" class="form-label">Quantity</label>
+                            <input type="number" class="form-control" id="quantity" formControlName="quantity">
+                            <p class="text-danger" *ngIf="addProductForm.get('quantity')!.touched && addProductForm.get('quantity')!.invalid">*Please enter quantity</p>
                         </div>
                     </div>
 
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>
-                        <textarea class="form-control" id="description" rows="3"></textarea>
+                        <textarea class="form-control" id="description" rows="3" formControlName="description"></textarea>
+                        <p class="text-danger" *ngIf="addProductForm.get('description')!.touched && addProductForm.get('description')!.invalid">*Please enter description</p>
                     </div>
         
-                    <button type="submit" class="btn btn-primary">Add Product</button>
+                    <button type="submit" class="btn btn-primary" (click)="submit()">Add Product</button>
                   </form>
             </div>
         </div>

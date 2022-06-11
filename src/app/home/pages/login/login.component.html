@@ -1,16 +1,18 @@
 <div class="container-fluid">
     <app-navbar></app-navbar>
-
+    <app-cartcanvas></app-cartcanvas>
     <div class="content my-5">
-        <form class="mx-auto">
+        <form class="mx-auto" [formGroup]="loginForm">
             <h4 class="my-4 text-uppercase fs-4">Login</h4>
             <div class="mb-3">
               <label for="email" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="email">
+              <input type="email" class="form-control shadow-none" id="email" formControlName="email">
+              <p class="text-danger" *ngIf="loginForm.get('email')!.touched && loginForm.get('email')!.invalid">*Please enter a valid email</p>
             </div>
             <div class="mb-3">
               <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" id="password">
+              <input type="password" class="form-control shadow-none" id="password" formControlName="password">
+              <p class="text-danger" *ngIf="loginForm.get('password')!.touched && loginForm.get('password')!.invalid">*Please enter a password</p>
             </div>
             <div class="mb-3">
                 <p class="fw-light">
@@ -19,7 +21,7 @@
                 </p>
             </div>
             <div align="center">
-                <button type="submit" class="btn btn-primary my-3 w-100 p-2">Login</button>
+                <button type="submit" class="btn btn-primary my-3 w-100 p-2"  (click)="submit()" [disabled]="loginForm.invalid">Login</button>
             </div>
         </form>
     </div>

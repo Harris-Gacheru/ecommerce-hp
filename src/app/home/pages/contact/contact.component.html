@@ -14,26 +14,34 @@
         </div>
 
         <div class="col-md-6">
-            <form class="form mx-auto">
+            <form class="form mx-auto" [formGroup]="contactForm">
                 <h5 class="mb-3">Reach out to us</h5>
                 <div class="mb-3">
                     <label for="fullname" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="fullname">
+                    <input type="text" class="form-control" id="fullname" formControlName="fullname">
+                    <p class="text-danger" *ngIf="contactForm.get('fullname')!.touched && contactForm.get('fullname')!.invalid">*Please enter your name</p>
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="email">
+                  <input type="email" class="form-control" id="email" formControlName="email">
+                  <p class="text-danger" *ngIf="contactForm.get('email')!.touched && contactForm.get('email')!.invalid">*Please enter a valid email</p>
                 </div>
                 <div class="mb-3">
                   <label for="subject" class="form-label">Subject</label>
-                  <input type="text" class="form-control" id="subject">
+                  <input type="text" class="form-control" id="subject" formControlName="subject">
+                  <p class="text-danger" *ngIf="contactForm.get('subject')!.touched && contactForm.get('subject')!.invalid">*Please enter subject</p>
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="3"></textarea>
+                    <textarea class="form-control" id="message" rows="3" formControlName="message"></textarea>
+                    <p class="text-danger" *ngIf="contactForm.get('message')!.touched && contactForm.get('message')!.invalid">*Please enter message</p>
                 </div>
                 <div align="right">
-                <button type="submit" class="btn btn-primary w-25">Send</button></div>
+                    <button type="submit" class="btn btn-primary w-25 d-flex align-items-center gap-2 text-uppercase justify-content-center" [disabled]="contactForm.invalid">
+                        <i class="bi bi-send"></i>
+                        Send
+                    </button>
+                </div>
               </form>
         </div>
     </div>

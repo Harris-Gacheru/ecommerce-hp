@@ -1,0 +1,4 @@
+.filter a:hover,
+.filter a:focus{
+    color: #0d6efd !important;
+}

@@ -1,31 +1,36 @@
 <div class="container-fluid">
     <app-navbar></app-navbar>
-
+    <app-cartcanvas></app-cartcanvas>
     <div class="content my-5">
-        <form class="mx-auto">
+        <form class="mx-auto" [formGroup]="registerForm">
             <h4 class="my-4 text-uppercase fs-4">Register</h4>
             <div class="row mb-3">
                 <div class="col-md-6">
                     <label for="firstName" class="form-label">First Name</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control shadow-none" formControlName="firstName">
+                    <p class="text-danger" *ngIf="registerForm.get('firstName')!.touched && registerForm.get('firstName')!.invalid">*Please enter first name</p>
                 </div>
                 <div class="col-md-6">
                     <label for="lastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control shadow-none" formControlName="lastName">
+                    <p class="text-danger" *ngIf="registerForm.get('lastName')!.touched && registerForm.get('lastName')!.invalid">*Please enter last name</p>
                 </div>
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="email">
+              <input type="email" class="form-control shadow-none" formControlName="email">
+              <p class="text-danger" *ngIf="registerForm.get('email')!.touched && registerForm.get('email')!.invalid">*Please enter a valid email</p>
             </div>
             <div class="row mb-3">
                 <div class="col-md-6">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password">
+                    <input type="password" class="form-control shadow-none" formControlName="password">
+                    <p class="text-danger" *ngIf="registerForm.get('password')!.touched && registerForm.get('password')!.invalid">*Please enter password</p>
                 </div>
                 <div class="col-md-6">
                     <label for="confirmPassword" class="form-label">Confirm Password</label>
-                    <input type="password" class="form-control" id="confirmPassword">
+                    <input type="password" class="form-control shadow-none" formControlName="confirmPassword">
+                    <p class="text-danger" *ngIf="registerForm.get('confirmPassword')!.touched && registerForm.get('confirmPassword')!.invalid">*Please confirm password</p>
                 </div>
             </div>
             <div class="mb-3">
@@ -35,7 +40,7 @@
                 </p>
             </div>
             <div align="center">
-                <button type="submit" class="btn btn-primary my-3 w-100 p-2">Sign Up</button>
+                <button type="submit" class="btn btn-primary my-3 w-100 p-2" (click)="submit()" [disabled]="registerForm.invalid">Sign Up</button>
             </div>
         </form>
     </div>
