@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -13,13 +14,25 @@ export class LoginComponent implements OnInit {
     password: ['', Validators.required]
   })
 
-  constructor(private fb:FormBuilder, private router: Router) { }
+  isLoading: boolean = false
+  error: string = ''
+  msg: string = ''
+
+  constructor(private fb:FormBuilder, private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
+    if (this.authService.isLoggedin) {
+      this.router.navigate(['/admin'])  
+    }
   }
 
   submit(){
-    console.log(this.loginForm)
-    this.router.navigate(['/admin'])
+    this.isLoading = true
+    this.authService.login()
+
+    setTimeout(() => {
+      this.isLoading = false
+      this.router.navigate(['/admin'])
+    }, 3000);
   }
 }
