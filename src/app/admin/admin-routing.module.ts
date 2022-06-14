@@ -11,7 +11,8 @@ const routes: Routes = [
   {path: '', component: DashboardComponent},
   {path: 'products', component: ProductsComponent},
   {path: 'add-product', component: AddproductComponent},
-  {path: 'product/:id', component: ProductComponent, children: [
+  {path: 'product/:id', children: [
+    {path: '', component: ProductComponent},
     {path: 'edit', component: EditComponent}
   ]},
   {path: 'profile', component: ProfileComponent}

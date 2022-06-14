@@ -14,20 +14,20 @@
             </ol>
         </nav>
         
-        <div class="content row d-flex">
-            <div class="product col-md-6">
-                <div class="prod-images">
-                    <div class="img border">
-                        <img src="../../../../assets/images/shampoo.png" alt="">
+        <div class="content">
+            <div class="product row w-75 mx-auto">
+                <div class="prod-images col-md-6">
+                    <div class="main-image">
+                        <img class="w-100 h-100 border" src="../../../../assets/images/prods/products (2).webp" alt="">
                     </div>
-                    <div class="images bg-light mt-2 d-flex justify-content-center">
-                        <img class="flex-fill" src="../../../../assets/images/shampoo.png" alt="">
-                        <img class="flex-fill"  src="../../../../assets/images/shampoo.png" alt="">
-                        <img class="flex-fill"  src="../../../../assets/images/shampoo.png" alt="">
-                        <img class="flex-fill"  src="../../../../assets/images/shampoo.png" alt="">
+                    
+                    <div class="thumbnails my-2">
+                        <img src="../../../../assets/images/prods/products (3).webp" class="border rounded-0 mx-1" alt="">
+                        <img src="../../../../assets/images/prods/products (2).webp" class="border rounded-0 mx-1" alt="">
+                        <img src="../../../../assets/images/prods/products (7).jpg" class="border rounded-0 mx-1" alt="">
                     </div>
                 </div>        
-                <div class="details mt-3 mb-2">
+                <div class="details col-md-6">
                     <div class="name">
                         <h5>Product Name: </h5>
                         <p>Lorem</p>
@@ -50,11 +50,11 @@
                             <p>45</p>
                         </div>
                     </div>
+                    <div class="actions mt-4">
+                        <a routerLink="/admin/product/1/edit" class="text-decoration-none me-5">Edit</a>
+                        <button type="button" class="btn bg-danger text-white">Delete</button>
+                    </div>      
                 </div>  
-                <div class="actions mt-4">
-                    <a routerLink="/admin/product/1/edit" class="text-decoration-none me-5">Edit</a>
-                    <button type="button" class="btn bg-danger text-white">Delete</button>
-                </div>      
             </div>
 
             <div class="edit col-md-6">

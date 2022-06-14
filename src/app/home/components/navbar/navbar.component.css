@@ -23,3 +23,31 @@ nav{
 .search-input input:focus{
     border-bottom: 1px solid #0d6efd !important;
 }
+
+.mobile-search{
+    display: none !important;
+}
+
+@media only screen and (max-width: 992px){
+    .desktop-search{
+        display: none !important;
+    }
+    
+    .mobile-search{
+        display: flex !important;
+    }
+
+    .nav-right-menu{
+        display: block !important;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .desktop-search{
+        display: flex !important;
+    }
+    
+    .mobile-search{
+        display: none !important;
+    }
+}

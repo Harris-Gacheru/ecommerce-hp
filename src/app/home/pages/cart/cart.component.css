@@ -7,6 +7,7 @@
 
 .content{
     height: calc(100vh - 78px);
+    overflow: auto;
 }
 
 .prod img{
@@ -25,3 +26,9 @@
     margin-top: -5px;
     cursor: pointer;
 }
+
+/* @media screen and (max-width: 576px) {
+    .checkout{
+        padding: 0 20px !important;
+    }
+} */

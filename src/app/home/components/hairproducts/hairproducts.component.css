@@ -19,3 +19,9 @@
     height: 180px;
     border: 1px solid #f0f0f0;
 }
+
+@media only screen and (max-width: 768px){
+    .product img{
+        height: 300px;
+    }
+}

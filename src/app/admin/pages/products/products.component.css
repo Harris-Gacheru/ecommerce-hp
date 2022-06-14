@@ -10,3 +10,22 @@ table img{
     height: 60px;
     border-radius: 50%;
 }
+
+.search{
+    width: 250px;
+    display: none;
+}
+
+.search input:hover,
+.search input:focus{
+    border: 1px solid #0d6efd !important;
+}
+
+@media only screen and (max-width: 768px){
+    .filter-col{
+        display: none;
+    }
+    .search{
+        display: block;
+    }
+}

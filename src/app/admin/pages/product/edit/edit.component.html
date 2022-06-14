@@ -1,36 +1,55 @@
-<div class="container pt-3">
-    <h4>Edit Product</h4>
-    <div class="form">
-        <form>
-            <div class="mb-3">
-              <label for="prodname" class="form-label">Name</label>
-              <input type="text" class="form-control" id="prodname">
-            </div>
-            <div class="mb-3">
-                <label for="category" class="form-label">Category</label>
-                <select class="form-select" aria-label="Category">
-                    <option selected>Category</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-            </div>
-            <div class="d-flex gap-2">
-              <div class="mb-3 w-50">
-                <label for="price" class="form-label">Price</label>
-                <input type="number" class="form-control" id="price">
-              </div>
-              <div class="mb-3 w-50">
-                <label for="quantity" class="form-label">Quantity</label>
-                <input type="number" class="form-control" id="quantity">
-              </div>
-            </div>
-            <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
-                <textarea class="form-control" id="description" rows="3"></textarea>
-            </div>
+<div class="container-fluid">
+  <div class="sidebar">
+      <app-sidebar></app-sidebar>
+  </div>
+  
+  <div class="body">
+    <app-navbar></app-navbar>
 
-            <button type="submit" class="btn btn-primary">Update Product</button>
-          </form>
+    <nav aria-label="breadcrumb" class="breadcrumb-nav mt-2 mx-5">
+        <ol class="breadcrumb bg-light p-3 ps-4 border rounded">
+          <li class="breadcrumb-item"><a routerLink="/admin/" class="text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item"><a routerLink="/admin/products" class="text-decoration-none">Products</a></li>
+          <li class="breadcrumb-item"><a routerLink="/admin/product/1" class="text-decoration-none">Product</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Edit Product</li>
+        </ol>
+    </nav>
+
+    <div class="container pt-3 w-50 mx-auto my-5">
+      <div class="form">
+          <h4>Edit Product</h4>
+            <form>
+                <div class="mb-3">
+                  <label for="prodname" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="prodname">
+                </div>
+                <div class="mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <select class="form-select" aria-label="Category">
+                        <option selected>Category</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                </div>
+                <div class="d-flex gap-2">
+                  <div class="mb-3 w-50">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="price">
+                  </div>
+                  <div class="mb-3 w-50">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" id="quantity">
+                  </div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" id="description" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Update Product</button>
+              </form>
+        </div>
     </div>
+  </div>
 </div>

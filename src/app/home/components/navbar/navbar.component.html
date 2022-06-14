@@ -1,10 +1,18 @@
 <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 px-2">
     <div class="container-fluid">
       <a class="navbar-brand fw-bolder">WAB</a>
+      
+      <ul class="navbar-nav me-auto mb-lg-0">              
+        <li class="nav-item search-input mobile-search d-flex align-items-center ms-2">
+          <i class="bi bi-search"></i>
+          <input type="text" class="form-control shadow-none border-0 border-bottom rounded-0" placeholder="Search...">
+        </li>
+      </ul>
+      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0 gap-4">
             <li class="nav-item">
@@ -16,13 +24,13 @@
               <li class="nav-item">
                 <a routerLink="/contact" routerLinkActive="active" class="nav-link">Contact Us</a>
               </li>              
-              <li class="nav-item search-input d-flex align-items-center ms-2">
+              <li class="nav-item search-input desktop-search d-flex align-items-center ms-2">
                 <i class="bi bi-search"></i>
                 <input type="text" class="form-control shadow-none border-0 border-bottom rounded-0" placeholder="Search...">
               </li>
         </ul>
 
-        <ul class="d-flex align-items-center navbar-nav mb-2 mb-lg-0 gap-3">           
+        <ul class="navbar-nav me-2 mb-2 mb-lg-0 gap-3 d-flex align-items-center nav-right-menu">           
             <li class="nav-item">
                 <a routerLink="/login" routerLinkActive="active" class="nav-link">Login</a>
               </li>
