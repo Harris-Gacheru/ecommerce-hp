@@ -18,7 +18,9 @@ import { ShopComponent } from './home/pages/shop/shop.component';
 import { ProductComponent } from './home/pages/product/product.component';
 import { FooterComponent } from './home/components/footer/footer.component';
 import { SharedModule } from './shared/shared.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SummaryPipe } from './pipes/summary.pipe';
+import { AddtobagComponent } from './home/components/addtobag/addtobag.component';
 
 @NgModule({
   declarations: [
@@ -35,14 +37,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     CartComponent,
     ShopComponent,
     ProductComponent,
-    FooterComponent
+    FooterComponent,
+    SummaryPipe,
+    AddtobagComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AdminModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

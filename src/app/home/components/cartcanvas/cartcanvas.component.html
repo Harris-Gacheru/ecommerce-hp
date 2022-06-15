@@ -5,19 +5,20 @@
 </div>
 <div class="offcanvas-body d-flex flex-column p-0">
     <div class="body p-4">
-        <div class="product bg-white d-flex align-items-center justify-content-between gap-4 p-2 position-relative my-2">
+        <p *ngIf="products.length == 0">Your bag is empty!</p>
+        <div class="product bg-white d-flex align-items-center justify-content-between gap-4 p-2 position-relative my-2" *ngFor="let product of products">
             <img class="w-25" src="../../../../assets/images/prods/products (1).jpg" alt="">
             <div class="details w-75">
-                <p>Lorem Shampoo</p>
-                <div class="d-flex justify-content-between align-items-center fw-light">
-                    <p>2</p>
-                    <p>$90.00</p>
+                <p>{{ product.name }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="fw-semibold">Qty: <span class="fw-light">{{ product.quantity }}</span></p>
+                    <p class="fw-semibold">Price: <span class="fw-light">kes {{ product.price }}</span></p>
                 </div>
             </div>
-            <p class="close btn-close"></p>
+            <p class="close btn-close" (click)="remove(product.id)"></p>
         </div>
 
-        <div class="product bg-white d-flex align-items-center justify-content-between gap-4 p-2 position-relative my-2">
+        <!-- <div class="product bg-white d-flex align-items-center justify-content-between gap-4 p-2 position-relative my-2">
             <img class="w-25" src="../../../../assets/images/prods/products (1).jpg" alt="">
             <div class="details w-75">
                 <p>Lorem Shampoo</p>
@@ -49,7 +50,7 @@
                 </div>
             </div>
             <p class="close btn-close"></p>
-        </div>
+        </div> -->
     </div>
 
     <div class="bottom py-2 px-3">

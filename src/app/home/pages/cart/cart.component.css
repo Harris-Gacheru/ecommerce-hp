@@ -13,19 +13,28 @@
 .prod img{
     width: 100px;
     height: 100px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
-.prod input{
-    width: 40px;
-    height: 35px;
+.quantity input{
+    width: 70px;
+    height: 37px;
     text-align: center;
+    outline: none;
+    border-radius: 0;
+    border: 1px solid #dee2e6;
 }
 
-.action{
-    margin-top: -5px;
-    cursor: pointer;
+.quantity input::-webkit-inner-spin-button,
+.quantity input::-webkit-outer-spin-button{
+    opacity: 1;
 }
+
+.prod:first-child{
+    border-top: 1px solid #dee2e6 !important;
+}
+
+
 
 /* @media screen and (max-width: 576px) {
     .checkout{

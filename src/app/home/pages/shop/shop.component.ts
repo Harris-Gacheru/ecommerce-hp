@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Product } from 'src/app/interfaces/product';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-shop',
@@ -7,13 +9,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent implements OnInit {
+  products: Product[] = []
 
-  constructor(private router: Router) { }
+
+  constructor(private router: Router, private productsService: ProductsService) { }
 
   ngOnInit(): void {
+    this.products = this.productsService.getproducts()
   }
 
-  redirect(){
-    this.router.navigate(['/product/1'])
+  redirect(id: string){
+    this.router.navigate([`/product/${id}`])
   }
 }

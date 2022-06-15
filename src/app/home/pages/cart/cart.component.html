@@ -2,12 +2,28 @@
     <app-navbar></app-navbar>
     
     <div class="content bg-light p-5">
-        <h4 class="fw-semibold">Your bag has <span class="text-success">4</span> items</h4>
+        <h4 class="fw-semibold">Your bag has <span class="text-success">{{ products.length }}</span> item(s)</h4>
 
         <div class="row">
             <div class="prods-list col-md-8 bg-white p-3 my-4 shadow-sm">
                 <div>
-                    <div class="prod d-flex align-items-center justify-content-between mx-auto gap-5 border-top border-bottom"> 
+                    <div class="prod d-flex align-items-center justify-content-between mx-auto gap-5 border-bottom" *ngFor="let product of products"> 
+                        <img class="w-25" src="{{ product.image }}" alt="">
+                        <div class="details w-75 py-3">
+                            <p class="fw-semibold fs-5">{{ product.name }}</p>
+                            <p class="text-justify">{{ product.description | summary: 60 }}</p>
+
+                            <div class="d-flex gap-5 align-items-center">
+                                <div class="quantity">
+                                    <input type="number" value="{{ product.selectedQuantity }}" #qty min="1" max="{{ product.quantity }}" (change)="onChange(qty.value)">
+                                </div>
+
+                                <p class="my-auto">Kes {{ product.price }}</p>
+                            </div>
+                        </div>
+                    </div>
+ 
+                <!--    <div class="prod d-flex align-items-center justify-content-between mx-auto gap-5 border-bottom"> 
                         <img class="w-25" src="../../../../assets/images/prods/products (2).webp" alt="">
                         <div class="details w-75 py-3">
                             <p class="fw-semibold fs-5">Lorem Shampoo</p>
@@ -23,25 +39,7 @@
                                 <p>$56.00</p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="prod d-flex align-items-center justify-content-between mx-auto gap-5 border-top border-bottom"> 
-                        <img class="w-25" src="../../../../assets/images/prods/products (2).webp" alt="">
-                        <div class="details w-75 py-3">
-                            <p class="fw-semibold fs-5">Lorem Shampoo</p>
-                            <p class="text-justify">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet....</p>
-
-                            <div class="d-flex gap-5 align-items-center">
-                                <div class="quantity d-flex gap-1 align-items-center justify-content-center">
-                                    <span class="action fs-3">+</span>
-                                    <input class="" type="text" value="4">
-                                    <span class="action fs-2">-</span>
-                                </div>
-
-                                <p>$56.00</p>
-                            </div>
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -72,5 +70,9 @@
         </div>
     </div>
 
+    <div *ngIf="isLoading">
+        <app-spinner></app-spinner>
+    </div>
+    
     <app-footer></app-footer>
 </div>

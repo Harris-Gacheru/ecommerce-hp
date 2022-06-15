@@ -1,0 +1,27 @@
+  <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog w-75">
+      <div class="modal-content rounded-0">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="staticBackdropLabel">Added to your bag</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" *ngIf="product">
+            <div class="d-flex border-top border-bottom py-3 gap-4">
+                <img src="{{ product.images[0] }}" alt="">
+                <div class="d-flex flex-column">
+                    <p class="fw-semibold">{{ product.name }}</p>
+                    <div class="d-flex w-100 gap-5">
+                        <p class="fw-semibold">Quantity: <span class="fw-light">{{ quantity }}</span></p>
+                        <p class="fw-semibold">Price: <span class="fw-light">{{ price }}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer border-0 d-flex justify-content-between gap-2">
+          <a routerLink="/shop" class="btn border border-dark rounded-0 py-2 px-4"  data-bs-dismiss="modal">Continue Shopping</a>
+          <a routerLink="/cart" class="btn bg-dark text-white rounded-0 py-2 px-4"  data-bs-dismiss="modal">Go to Cart</a>
+        </div>
+      </div>
+    </div>
+</div>

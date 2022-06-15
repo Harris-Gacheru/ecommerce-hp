@@ -27,16 +27,19 @@ img{
 .product{
     border: 0;
     cursor: pointer;
+    z-index: 1;
 }
 
 .product img{
     height: 220px;
-    object-fit: cover;
+    padding: 5px 0;
+    object-fit: contain;
 }
 
 .product button{
     opacity: 0;
     transition: 0.5s ease-in;
+    z-index: 3;
 }
 
 .product button:hover{

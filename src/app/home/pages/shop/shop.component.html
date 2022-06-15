@@ -39,67 +39,19 @@
         <!-- products -->
         <div class="wrapper px-5 col-md-10">
             <div class="products row my-5">
-                <div class="col-md-4 my-2">
-                    <div class="product card" (click)="redirect()">
-                        <img src="../../../../assets/images/prods/products (2).jpg" alt="">
-                        <h5 class="text-left fw-normal my-2">Lorem Shampoo</h5>
-                        <p class="summary text-justify fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetur adipi...</p>
+                <div class="col-md-4 my-2" *ngFor="let product of products">
+                    <div class="product card" (click)="redirect(product.id)">
+                        <img class="border" src="{{ product.images[0] }}" alt="">
+                        <h5 class="text-left fw-normal my-2">{{ product.name }}</h5>
+                        <p class="summary text-justify fs-6 fw-lighter">{{ product.description | summary: 60 }}</p>
                         <div class="d-flex justify-content-between fw-light my-2">
-                            <p>Shampoo</p>
-                            <p>$45.00</p>
+                            <p>{{ product.category }}</p>
+                            <p>Kes {{ product.price | currency: ' ' }}</p>
                         </div>
-                        <button class="bg-dark text-white p-2">Add to Cart</button>
+                        <button type="button" class="bg-dark text-white p-2 border-0">Add to Bag</button>
                     </div>
                 </div>
-                <div class="col-md-4 my-2">
-                    <div class="product card" (click)="redirect()">
-                        <img src="../../../../assets/images/prods/products (7).jpg" alt="">
-                        <h5 class="text-left fw-normal my-2">Lorem Shampoo</h5>
-                        <p class="summary text-justify fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetur adipi...</p>
-                        <div class="d-flex justify-content-between fw-light my-2">
-                            <p>Shampoo</p>
-                            <p>$45.00</p>
-                        </div>
-                        <button class="bg-dark text-white p-2">Add to Cart</button>
-                    </div>
-                </div>
-                <div class="col-md-4 my-2">
-                    <div class="product card" (click)="redirect()">
-                        <img src="../../../../assets/images/prods/products (2).jpg" alt="">
-                        <h5 class="text-left fw-normal my-2">Lorem Shampoo</h5>
-                        <p class="summary text-justify fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetur adipi...</p>
-                        <div class="d-flex justify-content-between fw-light my-2">
-                            <p>Shampoo</p>
-                            <p>$45.00</p>
-                        </div>
-                        <button class="bg-dark text-white p-2">Add to Cart</button>
-                    </div>
-                </div>
-                <div class="col-md-4 my-2">
-                    <div class="product card" (click)="redirect()">
-                        <img src="../../../../assets/images/prods/products (3).webp" alt="">
-                        <h5 class="text-left fw-normal my-2">Lorem Shampoo</h5>
-                        <p class="summary text-justify fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetur adipi...</p>
-                        <div class="d-flex justify-content-between fw-light my-2">
-                            <p>Shampoo</p>
-                            <p>$45.00</p>
-                        </div>
-                        <button class="bg-dark text-white p-2">Add to Cart</button>
-                    </div>
-                </div>
-                <div class="col-md-4 my-2">
-                    <div class="product card" (click)="redirect()">
-                        <img src="../../../../assets/images/prods/products (2).webp" alt="">
-                        <h5 class="text-left fw-normal my-2">Lorem Shampoo</h5>
-                        <p class="summary text-justify fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetur adipi...</p>
-                        <div class="d-flex justify-content-between fw-light my-2">
-                            <p>Shampoo</p>
-                            <p>$45.00</p>
-                        </div>
-                        <button class="bg-dark text-white p-2">Add to Cart</button>
-                    </div>
-                </div>
-                <div class="col-md-4 my-2">
+                <!-- <div class="col-md-4 my-2">
                     <div class="product card" (click)="redirect()">
                         <img src="../../../../assets/images/prods/products (7).jpg" alt="">
                         <h5 class="text-left fw-normal my-2">Lorem Shampoo</h5>
@@ -110,7 +62,7 @@
                         </div>
                         <button class="bg-dark text-white p-2">Add to Cart</button>
                     </div>
-                </div>
+                </div> -->                
             </div>
         </div>
 

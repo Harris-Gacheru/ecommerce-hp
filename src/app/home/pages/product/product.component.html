@@ -4,34 +4,36 @@
             <i class="bi bi-arrow-left-short"></i>
         </a>
 
-        <div class="product row w-75 mx-auto">
+        <div class="product row w-75 mx-auto" *ngIf="product">
             <div class="col-md-6">
                 <div class="main-image">
-                    <img class="w-100 h-100 border" src="../../../../assets/images/prods/products (2).webp" alt="">
+                    <img class="w-100 h-100 py-1" src="{{ selectedImage }}" alt="">
                 </div>
                 
                 <div class="thumbnails my-2">
-                    <img src="../../../../assets/images/prods/products (3).webp" class="border rounded-0 mx-1" alt="">
-                    <img src="../../../../assets/images/prods/products (2).webp" class="border rounded-0 mx-1" alt="">
-                    <img src="../../../../assets/images/prods/products (7).jpg" class="border rounded-0 mx-1" alt="">
+                    <img src="{{ image }}" class="thumbnail-image border py-1 rounded-0 mx-1" alt="" *ngFor="let image of product.images" (click)="getImageUrl(image, $event.target)">
+                    <!-- <img src="../../../../assets/images/prods/products (2).webp" class="border rounded-0 mx-1" alt="">
+                    <img src="../../../../assets/images/prods/products (7).jpg" class="border rounded-0 mx-1" alt=""> -->
                 </div>
             </div>
 
-            <div class="col-md-6">
-                <h5>Lorem hair oil</h5>
-                <p class="fw-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit dicta libero autem, ab laudantium molestiae! Lorem ipsum dolor sit amet.</p>
+            <div class="col-md-6 col-sm-12">
+                <h5>{{ product.name }}</h5>
+                <p class="fw-light">{{ product.description }}</p>
 
-                <div class="row d-flex justify-content-between align-items-end my-4">
+                <div class="q-p row d-flex justify-content-between align-items-end my-4">
                     <div class="col-md-3">
                         <h6 class="fw-normal">Quantity</h6>
-                        <input class="text-center border" type="number" value="1">
+                        <input class="text-center border" #quantity type="number" (change)="onChange(quantity.value)" value="1" min="1" max="{{ product.quantity }}">
                     </div>
-    
-                    <div class="add col-md-9">
-                        <button class="bg-dark text-white px-5 py-2 w-100 border-0">$45 &#160; &#8211;  &#160; Add to Bag</button>
+                    
+                    <div class="add col-md-9 col-sm-12">
+                        <button type="button" class="bg-dark text-white px-5 py-2 w-100 border-0" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="addToCart(product.id, product.name, product.category, price, product.quantity, qty, product.description, product.images[0])">Kes {{ price }} &#160; &#8211;  &#160; Add to Bag</button>
                     </div>
+                    <p *ngIf="alert" class="alert alert-danger p-1">Only 1 through {{ product.quantity }} allowed</p>
                 </div>
             </div>
         </div>
-    </div>    
+    </div>   
+    <app-addtobag [product]="product" [price]="price" [quantity]="qty"></app-addtobag> 
 </div>
